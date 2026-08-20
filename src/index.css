@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F8F6F1;
+    --text-primary: #161817;
+    --text-secondary: #666761;
+    --accent-olive: #65704B;
+    --accent-olive-hover: #535C3E;
+    --accent-olive-subtle: rgba(101, 112, 75, 0.08);
+    --border-light: #E4E1D9;
+    --border-subtle: #DCDCCF;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(228, 225, 217, 0.8);
+    --card-shadow: 0 10px 30px -10px rgba(22, 24, 23, 0.06);
+    --modal-overlay: rgba(22, 24, 23, 0.35);
+  }
+
+  .dark {
+    --bg-main: #111310;
+    --text-primary: #F2F1EA;
+    --text-secondary: #A9AAA2;
+    --accent-olive: #87936A;
+    --accent-olive-hover: #9BA87B;
+    --accent-olive-subtle: rgba(135, 147, 106, 0.12);
+    --border-light: #232720;
+    --border-subtle: #2D3229;
+    --card-bg: rgba(24, 27, 22, 0.85);
+    --card-border: rgba(45, 50, 41, 0.8);
+    --card-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.45);
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+  }
+
+  html, body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    touch-action: pan-y;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+}
+
+/* Font Family Utility Classes */
+.font-serif-en {
+  font-family: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
+}
+
+.font-sans-en {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-urdu {
+  font-family: 'Noto Naskh Arabic', 'Amiri', 'IBM Plex Sans Arabic', 'Urdu Typesetting', serif;
+  line-height: 1.95;
+}
+
+.font-arabic {
+  font-family: 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+  line-height: 1.9;
+}
+
+.font-arabic-sans {
+  font-family: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar for Modal content */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-olive);
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--accent-olive);
+  color: #FFFFFF;
+}
+
+/* Smooth Focus Rings */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent-olive);
+  outline-offset: 3px;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Hidayah",
+  "description": "Premium Trilingual Scholarly Presentation on Qadiyanism and the Finality of Prophethood.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
